@@ -32,6 +32,7 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcLoading/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcKeyPath'
+  s.dependency 'objcColor'
 
 end

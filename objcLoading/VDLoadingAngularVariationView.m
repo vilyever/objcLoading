@@ -1,6 +1,6 @@
 //
 //  VDLoadingAngularVariationView.m
-//  objcTemp
+//  objcLoading
 //
 //  Created by Deng on 16/7/12.
 //  Copyright © Deng. All rights reserved.
@@ -10,6 +10,8 @@
 #import <objcColor/objcColor.h>
 
 @interface VDLoadingAngularVariationView ()
+
+- (void)__i__initVDLoadingAngularVariationView;
 
 @end
 
@@ -25,7 +27,7 @@
 - (instancetype)init {
     self = [super init];
     
-    [self internalInitVDLoadingAngularVariationView];
+    [self __i__initVDLoadingAngularVariationView];
     
     return self;
 }
@@ -33,7 +35,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
-    [self internalInitVDLoadingAngularVariationView];
+    [self __i__initVDLoadingAngularVariationView];
     
     return self;
 }
@@ -41,7 +43,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
-    [self internalInitVDLoadingAngularVariationView];
+    [self __i__initVDLoadingAngularVariationView];
     
     return self;
 }
@@ -138,7 +140,7 @@
 
 
 #pragma mark Private Method
-- (void)internalInitVDLoadingAngularVariationView {
+- (void)__i__initVDLoadingAngularVariationView {
     _angularColor = [UIColor vd_colorWithHexValue:0x1E90FF];
     _radius = 35.0f;
     _torusWidth = 5.0f;

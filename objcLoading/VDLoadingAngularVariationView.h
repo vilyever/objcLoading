@@ -1,6 +1,6 @@
 //
 //  VDLoadingAngularVariationView.h
-//  objcTemp
+//  objcLoading
 //
 //  Created by Deng on 16/7/12.
 //  Copyright © Deng. All rights reserved.
@@ -25,6 +25,5 @@
 @property (nonatomic, strong) UIColor *angularColor;
 
 #pragma mark Private Method
-- (void)internalInitVDLoadingAngularVariationView;
 
 @end

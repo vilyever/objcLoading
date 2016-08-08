@@ -1,6 +1,6 @@
 //
 //  VDLoadingView.h
-//  objcTemp
+//  objcLoading
 //
 //  Created by Deng on 16/7/11.
 //  Copyright © Deng. All rights reserved.
@@ -28,9 +28,5 @@
 @property (nonatomic, assign) NSInteger progressAnimationRepeatedTimes;
 
 #pragma mark Private Method
-- (void)internalAppWillResignActive:(NSNotification *)notification;
-- (void)internalAppDidEnterBackground:(NSNotification *)notification;
-- (void)internalAppWillEnterForeground:(NSNotification *)notification;
-- (void)internalAppDidBecomeActive:(NSNotification *)notification;
 
 @end

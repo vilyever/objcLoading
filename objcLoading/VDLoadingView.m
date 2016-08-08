@@ -1,6 +1,6 @@
 //
 //  VDLoadingView.m
-//  objcTemp
+//  objcLoading
 //
 //  Created by Deng on 16/7/11.
 //  Copyright © Deng. All rights reserved.
@@ -9,9 +9,20 @@
 #import "VDLoadingView.h"
 #import <objcKeyPath/objcKeyPath.h>
 
-
-
 @interface VDLoadingView ()
+
+- (void)__i__initVDLoadingView;
+
+- (void)__i__startAnimation:(BOOL)isResume;
+- (void)__i__stopAnimation:(BOOL)isPause;
+
+- (void)__i__appWillResignActive:(NSNotification *)notification;
+- (void)__i__appDidEnterBackground:(NSNotification *)notification;
+- (void)__i__appWillEnterForeground:(NSNotification *)notification;
+- (void)__i__appDidBecomeActive:(NSNotification *)notification;
+
+- (void)__i__stopAnimationWhenBackground;
+- (void)__i__tryStartAnimationWhenForeground;
 
 @property (nonatomic, assign) CGFloat lastProgress;
 @property (nonatomic, assign) CFTimeInterval lastAnimationBeginTime;
@@ -50,10 +61,10 @@
         _animated = animated;
         if (_animated) {
             self.progressAnimationRepeatedTimes = -1;
-            [self internalStartAnimation:NO];
+            [self __i__startAnimation:NO];
         }
         else {
-            [self internalStopAnimation:NO];
+            [self __i__stopAnimation:NO];
         }
     }
 }
@@ -67,7 +78,7 @@
 - (instancetype)init {
     self = [super init];
     
-    [self internalInitVDLoadingView];
+    [self __i__initVDLoadingView];
     self.backgroundColor = [UIColor clearColor];
     
     return self;
@@ -76,7 +87,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
-    [self internalInitVDLoadingView];
+    [self __i__initVDLoadingView];
     self.backgroundColor = [UIColor clearColor];
     
     return self;
@@ -85,7 +96,7 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
-    [self internalInitVDLoadingView];
+    [self __i__initVDLoadingView];
     
     return self;
 }
@@ -99,10 +110,10 @@
     [super setHidden:hidden];
     
     if (hidden) {
-        [self internalStopAnimationWhenBackground];
+        [self __i__stopAnimationWhenBackground];
     }
     else {
-        [self internalTryStartAnimationWhenForeground];
+        [self __i__tryStartAnimationWhenForeground];
     }
 }
 
@@ -110,10 +121,10 @@
     [super didMoveToWindow];
     
     if (!self.window) {
-        [self internalStopAnimationWhenBackground];
+        [self __i__stopAnimationWhenBackground];
     }
     else {
-        [self internalTryStartAnimationWhenForeground];
+        [self __i__tryStartAnimationWhenForeground];
     }
 }
 
@@ -143,21 +154,21 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     
     if (self.animated && flag) {
-        [self internalStartAnimation:NO];
+        [self __i__startAnimation:NO];
     }
 }
 
 #pragma mark Private Method
-- (void)internalInitVDLoadingView {
+- (void)__i__initVDLoadingView {
     _progressAnimationDuration = 2;
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalAppDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__appWillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__appDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__appWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__appDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
-- (void)internalStartAnimation:(BOOL)isResume {
+- (void)__i__startAnimation:(BOOL)isResume {
     if (self.isHidden
         || !self.window
         || [UIApplication sharedApplication].applicationState != UIApplicationStateActive) {
@@ -186,7 +197,7 @@
     [self.layer addAnimation:self.progressAnimation forKey:VDKeyPath(self, progressAnimation)];
 }
 
-- (void)internalStopAnimation:(BOOL)isPause {
+- (void)__i__stopAnimation:(BOOL)isPause {
     if (![self.layer animationForKey:VDKeyPath(self, progressAnimation)]) {
         return;
     }
@@ -197,29 +208,29 @@
     [self.layer removeAnimationForKey:VDKeyPath(self, progressAnimation)];
 }
 
-- (void)internalAppWillResignActive:(NSNotification *)notification {
+- (void)__i__appWillResignActive:(NSNotification *)notification {
 }
 
-- (void)internalAppDidEnterBackground:(NSNotification *)notification {
-    [self internalStopAnimationWhenBackground];
+- (void)__i__appDidEnterBackground:(NSNotification *)notification {
+    [self __i__stopAnimationWhenBackground];
 }
 
-- (void)internalAppWillEnterForeground:(NSNotification *)notification {
+- (void)__i__appWillEnterForeground:(NSNotification *)notification {
 }
 
-- (void)internalAppDidBecomeActive:(NSNotification *)notification {
-    [self internalTryStartAnimationWhenForeground];
+- (void)__i__appDidBecomeActive:(NSNotification *)notification {
+    [self __i__tryStartAnimationWhenForeground];
 }
 
-- (void)internalStopAnimationWhenBackground {
+- (void)__i__stopAnimationWhenBackground {
     if (self.animated) {
-        [self internalStopAnimation:YES];
+        [self __i__stopAnimation:YES];
     }
 }
 
-- (void)internalTryStartAnimationWhenForeground {
+- (void)__i__tryStartAnimationWhenForeground {
     if (self.animated) {
-        [self internalStartAnimation:YES];
+        [self __i__startAnimation:YES];
     }
 }
 

@@ -1,6 +1,6 @@
 //
 //  VDLoadingLayer.m
-//  objcTemp
+//  objcLoading
 //
 //  Created by Deng on 16/7/11.
 //  Copyright © Deng. All rights reserved.
