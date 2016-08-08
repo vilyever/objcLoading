@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char objcLoadingVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <objcLoading/PublicHeader.h>
 
-
+#import <objcLoading/VDLoadingLayer.h>
+#import <objcLoading/VDLoadingView.h>
+#import <objcLoading/VDLoadingAngularVariationView.h>
