@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE6409A51D581D1A00652BAC /* objcLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6409A41D581D1A00652BAC /* objcLoading.h */; };
+		FE6409A51D581D1A00652BAC /* objcLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6409A41D581D1A00652BAC /* objcLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6409AC1D581D1B00652BAC /* objcLoading.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6409A11D581D1A00652BAC /* objcLoading.framework */; };
 		FE6409B11D581D1B00652BAC /* objcLoadingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6409B01D581D1B00652BAC /* objcLoadingTests.m */; };
+		FE6409BE1D581D3C00652BAC /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FE6409BB1D581D3C00652BAC /* Cartfile */; };
+		FE6409BF1D581D3C00652BAC /* objcLoading.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE6409BC1D581D3C00652BAC /* objcLoading.podspec */; };
+		FE6409C71D581D7400652BAC /* VDLoadingAngularVariationView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6409C11D581D7400652BAC /* VDLoadingAngularVariationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6409C81D581D7400652BAC /* VDLoadingAngularVariationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6409C21D581D7400652BAC /* VDLoadingAngularVariationView.m */; };
+		FE6409C91D581D7400652BAC /* VDLoadingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6409C31D581D7400652BAC /* VDLoadingLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6409CA1D581D7400652BAC /* VDLoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6409C41D581D7400652BAC /* VDLoadingLayer.m */; };
+		FE6409CB1D581D7400652BAC /* VDLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6409C51D581D7400652BAC /* VDLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6409CC1D581D7400652BAC /* VDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6409C61D581D7400652BAC /* VDLoadingView.m */; };
+		FE6409CE1D581DD300652BAC /* objcKeyPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6409CD1D581DD300652BAC /* objcKeyPath.framework */; };
+		FE6409D01D581E2E00652BAC /* objcColor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6409CF1D581E2E00652BAC /* objcColor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +39,17 @@
 		FE6409AB1D581D1B00652BAC /* objcLoadingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcLoadingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6409B01D581D1B00652BAC /* objcLoadingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcLoadingTests.m; sourceTree = "<group>"; };
 		FE6409B21D581D1B00652BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6409BB1D581D3C00652BAC /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FE6409BC1D581D3C00652BAC /* objcLoading.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcLoading.podspec; sourceTree = "<group>"; };
+		FE6409BD1D581D3C00652BAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE6409C11D581D7400652BAC /* VDLoadingAngularVariationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLoadingAngularVariationView.h; sourceTree = "<group>"; };
+		FE6409C21D581D7400652BAC /* VDLoadingAngularVariationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingAngularVariationView.m; sourceTree = "<group>"; };
+		FE6409C31D581D7400652BAC /* VDLoadingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLoadingLayer.h; sourceTree = "<group>"; };
+		FE6409C41D581D7400652BAC /* VDLoadingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingLayer.m; sourceTree = "<group>"; };
+		FE6409C51D581D7400652BAC /* VDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDLoadingView.h; sourceTree = "<group>"; };
+		FE6409C61D581D7400652BAC /* VDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDLoadingView.m; sourceTree = "<group>"; };
+		FE6409CD1D581DD300652BAC /* objcKeyPath.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcKeyPath.framework; path = Carthage/Build/iOS/objcKeyPath.framework; sourceTree = "<group>"; };
+		FE6409CF1D581E2E00652BAC /* objcColor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcColor.framework; path = Carthage/Build/iOS/objcColor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6409CE1D581DD300652BAC /* objcKeyPath.framework in Frameworks */,
+				FE6409D01D581E2E00652BAC /* objcColor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +76,14 @@
 		FE6409971D581D1A00652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE6409CF1D581E2E00652BAC /* objcColor.framework */,
+				FE6409CD1D581DD300652BAC /* objcKeyPath.framework */,
 				FE6409A31D581D1A00652BAC /* objcLoading */,
 				FE6409AF1D581D1B00652BAC /* objcLoadingTests */,
 				FE6409A21D581D1A00652BAC /* Products */,
+				FE6409BB1D581D3C00652BAC /* Cartfile */,
+				FE6409BC1D581D3C00652BAC /* objcLoading.podspec */,
+				FE6409BD1D581D3C00652BAC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +101,12 @@
 			children = (
 				FE6409A41D581D1A00652BAC /* objcLoading.h */,
 				FE6409A61D581D1A00652BAC /* Info.plist */,
+				FE6409C11D581D7400652BAC /* VDLoadingAngularVariationView.h */,
+				FE6409C21D581D7400652BAC /* VDLoadingAngularVariationView.m */,
+				FE6409C31D581D7400652BAC /* VDLoadingLayer.h */,
+				FE6409C41D581D7400652BAC /* VDLoadingLayer.m */,
+				FE6409C51D581D7400652BAC /* VDLoadingView.h */,
+				FE6409C61D581D7400652BAC /* VDLoadingView.m */,
 			);
 			path = objcLoading;
 			sourceTree = "<group>";
@@ -93,7 +127,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6409CB1D581D7400652BAC /* VDLoadingView.h in Headers */,
 				FE6409A51D581D1A00652BAC /* objcLoading.h in Headers */,
+				FE6409C91D581D7400652BAC /* VDLoadingLayer.h in Headers */,
+				FE6409C71D581D7400652BAC /* VDLoadingAngularVariationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +215,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6409BF1D581D3C00652BAC /* objcLoading.podspec in Resources */,
+				FE6409BE1D581D3C00652BAC /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6409C81D581D7400652BAC /* VDLoadingAngularVariationView.m in Sources */,
+				FE6409CC1D581D7400652BAC /* VDLoadingView.m in Sources */,
+				FE6409CA1D581D7400652BAC /* VDLoadingLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +356,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcLoading/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +376,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcLoading/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
