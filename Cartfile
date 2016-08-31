@@ -1,2 +1,2 @@
-github "vilyever/objcKeyPath" "master"
-github "vilyever/objcColor" "master"
+github "vilyever/objcKeyPath" == 1.1.0
+github "vilyever/objcColor" == 1.1.0
